@@ -89,48 +89,39 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 
-      wait for clk_period*2;
+      wait for clk_period*10;
 
       -- insert stimulus here 
 		
+		--first floor
 		reset<='1';
 		wait for clk_period*2;
+		reset<='0';
+		wait for clk_period*2;
 		
-		reset<='0';
+		---second
 		up_down<='1';
 		stop<='0';
-		wait for clk_period*1;
+		wait for clk_period*2;
+		stop<='1';
+		wait for clk_period*2;
 		
-		reset<='0';
-		up_down<='1';
-		stop<='1';
-		wait for clk_period*1;
-
-		reset<='0';
-		up_down<='1';
+		--third
 		stop<='0';
-		wait for clk_period*1;
-
-		reset<='0';
-		up_down<='1';
+		wait for clk_period*2;
 		stop<='1';
-		wait for clk_period*1;
-
-		reset<='0';
-		up_down<='1';
-		stop<='0';
-		wait for clk_period*1;
+		wait for clk_period*2;
 		
-		reset<='0';
-		up_down<='1';
+		--fourth
 		stop<='1';
-		wait for clk_period*1;
-
-		reset<='0';
-		up_down<='0';
-		stop<='0';
-		wait for clk_period*4;
-
+		wait for clk_period*2;
+		stop<='1';
+		wait for clk_period*2;
+		
+		--return to 1
+		up_down <= '0';
+		stop <= '0';
+		wait for clk_period*2;
 
       wait;
    end process;

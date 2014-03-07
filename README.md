@@ -20,7 +20,7 @@ Questions:
 
 Reset is synchronous because "if" statement that implements is proceded by another "if" that detects a rising edge of the clock.
 
-2-"Will you mealy machine be different from your moore machine?"
+2-"Will your mealy machine be different from your moore machine?"
 
 No. Just added few lines at the end.
 

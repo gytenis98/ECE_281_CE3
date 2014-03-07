@@ -5,14 +5,14 @@ ECE_281_CE3
 
 ![alt tag](http://s21.postimg.org/y7vkwh8o7/moore_screenshot.jpg)
 
-I checked the output manually. It was working well. 
+I checked the output manually. It was working well. As one can see from the picture elevator is moving from the first floor [0001] to the top floor [0100] and stops at each floor. On the way back it does the same thing, but this time from the top to bottom. 
 
 
 #Mealy 
 
 ![alt tag](http://s1.postimg.org/kg3q25jhr/Mealy_screenshot.jpg)
 
-
+This picture shows how the elevator moves from the first floor [0001] to the top floor [0100] and stops at each floor. Difference from the first "program" is that it does not stop at every floor on it's way back. It just goes from the top floor to the bottom floor.
 
 Questions:
 
